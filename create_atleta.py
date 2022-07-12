@@ -16,3 +16,4 @@ def create_atleta(atleta_data, headers):
     else:
         print("ERROR " + str(response.status_code) + ": ")
         print(response.text)
+        exit()

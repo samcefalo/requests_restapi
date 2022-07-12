@@ -19,3 +19,4 @@ def create_equipe(headers):
     else:
         print("ERROR " + str(response.status_code) + ": ")
         print(response.text)
+        exit()

@@ -14,3 +14,4 @@ def create_jogo(jogo_data, headers):
     else:
         print("ERROR " + str(response.status_code) + ": ")
         print(response.text)
+        exit()

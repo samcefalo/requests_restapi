@@ -14,3 +14,4 @@ def login(user_data):
     else:
         print("ERROR " + str(response.status_code) + ": ")
         print(response.text)
+        exit()
