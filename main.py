@@ -105,6 +105,7 @@ for i in range(acao_amount):
         "exito": choice(bool_list)
     }
     create_acao(acao_data, headers)
+    time.sleep(0.5)
 
 print("-" * 20)
 print("Finish")
