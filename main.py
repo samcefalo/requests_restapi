@@ -48,7 +48,10 @@ equipes = list()
 equipes.append(create_equipe(headers))
 equipes.append(create_equipe(headers))
 
-atleta_amount = int(input('Enter the number of athletes: '))
+atleta_amount = 0
+while atleta_amount <= 0:
+    atleta_amount = int(input('Enter the number of athletes: '))
+
 atletas = {}
 
 for i in range(atleta_amount):
@@ -81,7 +84,9 @@ bool_list = ["true", "false"]
 acoes_list = ["Desarme", "Drible", "Finalizacao", "Passe", "Recepcao"]
 placar_list = ["0x0", "1x0", "1x1", "2x0", "2x1", "2x2", "0x1", "0x2"]
 
-acao_amount = int(input('Enter the number of actions: '))
+acao_amount = 0
+while acao_amount <= 0:
+    acao_amount = int(input('Enter the number of actions: '))
 
 for i in range(acao_amount):
     atleta = choice(list(atletas))
