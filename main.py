@@ -15,11 +15,14 @@ email = nome + "@teste.com"
 senha = "123456"
 
 option = 0
-while option not in [1,2]:
+while option not in [1, 2]:
     print("1 - Create new user")
     print("2 - Login with registered user")
-    option = int(input('Choice an option: '))
-
+    try:
+        option = int(input('Choice an option: '))
+    except:
+        option = 0
+        
 if option == 2:
     email = input('E-mail: ')
     senha = input('Password: ')
@@ -50,7 +53,10 @@ equipes.append(create_equipe(headers))
 
 atleta_amount = 0
 while atleta_amount <= 0:
-    atleta_amount = int(input('Enter the number of athletes: '))
+    try:
+        atleta_amount = int(input('Enter the number of athletes: '))
+    except:
+        atleta_amount = 0
 
 atletas = {}
 
@@ -86,7 +92,10 @@ placar_list = ["0x0", "1x0", "1x1", "2x0", "2x1", "2x2", "0x1", "0x2"]
 
 acao_amount = 0
 while acao_amount <= 0:
-    acao_amount = int(input('Enter the number of actions: '))
+    try:
+        acao_amount = int(input('Enter the number of actions: '))
+    except:
+        acao_amount = 0
 
 for i in range(acao_amount):
     atleta = choice(list(atletas))
